@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-  .body {
+  body {
     margin: 0px;
     background: #2c3e50; /* fallback for old browsers */
     background: -webkit-linear-gradient(

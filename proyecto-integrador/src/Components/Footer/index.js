@@ -5,11 +5,11 @@ export default function Header() {
 
   return (
     <footer>
-      <section class="footer">
-        <article class="nombres">Nazareno Flores Muñoz</article>
-        <article class="nombres">Luciano Setton</article>
-        <article class="nombres">Santiago Junco</article>
-        <img class="logoFooter" src="./img/logoMDB.svg" alt="" />
+      <section className="footer">
+        <article className="nombres">Nazareno Flores Muñoz</article>
+        <article className="nombres">Luciano Setton</article>
+        <article className="nombres">Santiago Junco</article>
+        <img className="logoFooter" src="./img/logoMDB.svg" alt="" />
       </section>
     </footer>
     )
