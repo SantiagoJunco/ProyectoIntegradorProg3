@@ -42,6 +42,7 @@ class PopularesContainer extends Component {
                         <h1>Trayendo peliculas...</h1> :
                         this.state.populares.map((popular) => <Popular
                         key={popular.id}
+                        id={popular.id}
                         imagen={'https://image.tmdb.org/t/p/w500' + popular.poster_path}
                         titulo={popular.title}
                         descripcion={popular.overview}

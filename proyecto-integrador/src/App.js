@@ -8,7 +8,8 @@ function App() {
     <>
       <Header />
       <Switch>
-        <Route path={'/'} exact={true} component={Home}  />
+        <Route path='/' exact={true} component={Home}  />
+        <Route path='/detalle/id/:id' component={Home} /> 
       </Switch>
       <Footer />
     </>

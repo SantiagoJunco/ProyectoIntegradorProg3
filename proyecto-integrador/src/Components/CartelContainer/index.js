@@ -42,6 +42,7 @@ class CartelContainer extends Component {
                         <h1>Trayendo peliculas...</h1> :
                         this.state.enCartel.map((cartel) => <Cartel
                         key={cartel.id}
+                        id={cartel.id}
                         imagen={'https://image.tmdb.org/t/p/w500' + cartel.poster_path}
                         titulo={cartel.title}
                         descripcion={cartel.overview}
