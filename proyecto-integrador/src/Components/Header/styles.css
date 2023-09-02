@@ -1,0 +1,44 @@
+.header {
+    background: #c31432; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #240b36,
+      #c31432
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #240b36,
+      #c31432
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.541);
+  }
+  
+  .logo {
+    height: 160px;
+    order: -1;
+    padding: 12px;
+    border-radius: 20px;
+  }
+  
+  .nav {
+    display: flex;
+    order: 0;
+    background-color: rgba(17, 194, 185, 0.575);
+    border-radius: 20px;
+    padding: 12px;
+  }
+  
+  .formulario {
+    order: 1;
+    padding: 12px;
+  }
+
+  .busqueda {
+    text-align: center;
+  }
