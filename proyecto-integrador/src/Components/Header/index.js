@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Formulario from '../Formulario'
 import './styles.css'
 
 export default function Header() {
@@ -29,15 +30,8 @@ export default function Header() {
 
             <img className="logo" src="./img/logo.png" alt="Logo" />
 
-            <form className="formulario" action="./search-results.html" method="GET">
-                <input
-                    className="busqueda"
-                    placeholder="Búsqueda"
-                    name="busqueda"
-                    type="text"
-                />
-                <button type="submit">Buscar</button>
-            </form>
+            <Formulario/>
+           
         </header>
     )
 }
