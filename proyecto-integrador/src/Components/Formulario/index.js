@@ -7,14 +7,11 @@ export default class formulario extends Component {
       }
     evitarSubmit(evento){
         evento.preventDefault()
+        
       }
 
     controlarCambios(evento) {
-        this.setState({valor: evento.target.value}, () => this.buscarPelicula());
-      }
-
-    buscarPelicula(){
-       //
+        this.setState({valor: evento.target.value});
       }
 
     render() {
@@ -24,7 +21,7 @@ export default class formulario extends Component {
                     className="busqueda"
                     placeholder="Búsqueda"
                     name="busqueda"
-                    type="text" onSubmit={(event)=>this.controlarCambios(event)} value={this.state.valor} 
+                    type="text" onChange={(event)=>this.controlarCambios(event)} value={this.state.valor} 
                 />
                 <button type="submit">Buscar</button>
             </form>
