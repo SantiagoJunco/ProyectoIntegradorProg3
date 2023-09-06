@@ -1,0 +1,12 @@
+.contenedorVerMas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.masPelis{
+    font-size: 18px; 
+    padding: 12px 28px; 
+}
+

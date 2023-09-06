@@ -51,7 +51,7 @@ class index extends Component {
             <main>
                 <h2 className="titulos">PELÍCULAS POPULARES  <a className='titulos' href='/todasPopulares'>(Ver todas)</a></h2>
                 <PopularesContainer populares={this.state.populares}/>
-                <h2 className="titulos">PELÍCULAS EN CARTELERA</h2>
+                <h2 className="titulos">PELÍCULAS EN CARTELERA <a className='titulos' href='/todasCartel'>(Ver todas)</a></h2>
                 <CartelContainer enCartel={this.state.enCartel} />
             </main>
         )
