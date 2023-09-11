@@ -6,6 +6,7 @@ import todasPopulares from "./Screens/todasPopulares"
 import todasCartel from "./Screens/todasCartel"
 import DetallePelicula from "./Screens/DetallePelicula"
 import SearchResults from './Screens/SearchResults'
+import Favoritos from './Screens/Favoritos'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/todasPopulares' component={todasPopulares} /> 
         <Route path='/todasCartel' component={todasCartel} /> 
         <Route path='/busqueda/:busqueda' component={SearchResults} /> 
+        <Route path='/Favoritos' component={Favoritos} /> 
       </Switch>
       <Footer />
     </>

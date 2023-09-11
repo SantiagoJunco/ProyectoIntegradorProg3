@@ -1,7 +1,7 @@
 import { Component } from "react"
 import { Link } from 'react-router-dom';
 
-class Cartel extends Component {
+class Favorito extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -60,6 +60,7 @@ class Cartel extends Component {
         let favsFiltrados = arrParseado.filter((id)=> id !== idPersonaje)
         let arrStringificado = JSON.stringify(favsFiltrados)
         localStorage.setItem('Favoritos', arrStringificado)
+        this.props.actualizarState(idPersonaje)
         this.setState({
             esFavorito: false
         })
@@ -86,4 +87,4 @@ class Cartel extends Component {
     }
 }
 
-export default Cartel
+export default Favorito
