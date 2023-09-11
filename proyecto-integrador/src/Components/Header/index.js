@@ -10,6 +10,14 @@ export default function Header() {
             ruta: '/',
         },
         {
+            nombre: 'POPULARES',
+            ruta: '/todasPopulares',
+        },
+        {
+            nombre: 'EN CARTEL',
+            ruta: '/todasCartel',
+        },
+        {
             nombre: 'FAVORITOS',
             ruta: '/Favoritos',
         }
