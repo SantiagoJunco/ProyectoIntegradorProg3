@@ -6,7 +6,7 @@ export default class DetallePelicula extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            dataPelicula: []
+            dataPelicula: null
         }
     }
 
@@ -26,7 +26,7 @@ export default class DetallePelicula extends Component {
     }
 
   render() {
-    if (this.state.dataPelicula.length !== 0) {
+    if (this.state.dataPelicula !== null) {
         return (
             <PeliculaID Pelicula={this.state.dataPelicula} />
            )
