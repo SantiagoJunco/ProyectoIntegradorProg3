@@ -61,9 +61,6 @@ class Favorito extends Component {
         let arrStringificado = JSON.stringify(favsFiltrados)
         localStorage.setItem('Favoritos', arrStringificado)
         this.props.actualizarState(idPersonaje)
-        this.setState({
-            esFavorito: false
-        })
     }
 
     render() {
