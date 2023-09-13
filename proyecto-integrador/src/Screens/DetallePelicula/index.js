@@ -11,25 +11,27 @@ export default class DetallePelicula extends Component {
     }
 
     componentDidMount() {
-      this.traerDetallePelicula()
+        this.traerDetallePelicula()
     }
-    traerDetallePelicula() { 
+    traerDetallePelicula() {
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?include_adult=false&language=en-US&page=1`, options)
             .then(resp => resp.json())
             .then(data => {
                 console.log(data)
                 this.setState({
-                   dataPelicula: data
+                    dataPelicula: data
                 })
             })
             .catch(err => console.log(err))
     }
 
-  render() {
-    if (this.state.dataPelicula !== null) {
-        return (
-            <PeliculaID Pelicula={this.state.dataPelicula} />
-           )
+    render() {
+        if (this.state.dataPelicula !== null) {
+            return <PeliculaID Pelicula={this.state.dataPelicula} />
+        } else {
+            return <section className="listado_detalle_generos-Favoritos-home-search" id="section">
+                <h2>Cargando...</h2>
+            </section>
+        }
     }
-  }
 }

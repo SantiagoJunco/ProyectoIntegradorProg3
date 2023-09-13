@@ -12,8 +12,6 @@ class ResultsContainer extends Component {
         return (
             <section className="listado_detalle_generos-Favoritos-home-search" id="section">
                 {
-                    this.props.busqueda.length === 0 ?
-                        <h1>Trayendo peliculas...(puede ser que no haya resultados para tu búsqueda)</h1> :
                         this.props.busqueda.map((peliculaBuscada) => <Resultado
                         key={peliculaBuscada.id}
                         id={peliculaBuscada.id}

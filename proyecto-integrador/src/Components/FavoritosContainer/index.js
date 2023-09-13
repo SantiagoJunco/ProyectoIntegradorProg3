@@ -9,11 +9,8 @@ class FavoritosContainer extends Component {
 
   render(){
     return (
-      <>
       <div className="listado_detalle_generos-Favoritos-home-search" id="section">
         {
-          this.props.peliculas.length === 0 ?
-          <h1>No tienes favoritos</h1> :
           this.props.peliculas.map((pelicula)=> 
           <Favorito 
             id={pelicula.id} 
@@ -24,7 +21,6 @@ class FavoritosContainer extends Component {
           />)
         }
       </ div>
-      </>
     )
   }
 }

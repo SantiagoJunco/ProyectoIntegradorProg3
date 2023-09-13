@@ -7,6 +7,7 @@ import todasCartel from "./Screens/todasCartel"
 import DetallePelicula from "./Screens/DetallePelicula"
 import SearchResults from './Screens/SearchResults'
 import Favoritos from './Screens/Favoritos'
+import NotFound from './Screens/NotFound'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/todasCartel' component={todasCartel} /> 
         <Route path='/busqueda/:busqueda' component={SearchResults} /> 
         <Route path='/Favoritos' component={Favoritos} /> 
+        <Route component={NotFound} /> 
       </Switch>
       <Footer />
     </>

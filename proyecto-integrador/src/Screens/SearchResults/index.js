@@ -20,7 +20,7 @@ class SearchResults extends Component {
         fetch(`https://api.themoviedb.org/3/search/movie?query=${this.props.match.params.busqueda}&include_adult=false&language=en-US&page=1`, options)
             .then(resp => resp.json())
             .then(data => {
-                console.log('log del fetch',data)
+                console.log('log del fetch', data)
                 this.setState({
                     busqueda: data.results
                 }
@@ -29,18 +29,26 @@ class SearchResults extends Component {
             .catch(err => console.log(err))
     }
 
-    componentDidUpdate(){
+    componentDidUpdate() {
         this.resultadosBusqueda()
     }
 
 
     render() {
-        return (
-            <main>
-                <h2 className="titulos">Resultados de búsqueda </h2>
-                <ResultsContainer busqueda={this.state.busqueda}/>
+        if (this.state.busqueda.length !== 0) {
+            return (
+                <main>
+                    <h2 className="titulos">Resultados de búsqueda </h2>
+                    <ResultsContainer busqueda={this.state.busqueda} />
+                </main>
+            )
+        } else {
+            return <main>
+                <h2 className="titulos">No hay resultados para tu búsqueda </h2>
+                <section className='listado_detalle_generos-Favoritos-home-search'></section>
             </main>
-        )
+        }
+
     }
 }
 

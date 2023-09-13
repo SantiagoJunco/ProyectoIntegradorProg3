@@ -24,6 +24,11 @@
     height: 250px;
     border-radius: 20px;
   }
+  .img_error{
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+  }
   
   .logoFooter {
     width: 150px;
