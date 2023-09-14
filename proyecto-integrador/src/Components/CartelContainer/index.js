@@ -13,7 +13,8 @@ class CartelContainer extends Component {
             <section className="listado_detalle_generos-Favoritos-home-search" id="section2">
                 {
                     this.props.enCartel.length === 0 ?
-                        <h1>Trayendo peliculas...</h1> :
+                        <h1 className='titulos'>Trayendo peliculas...</h1> 
+                        :
                         this.props.enCartel.map((cartel) => <Cartel
                         key={cartel.id}
                         id={cartel.id}

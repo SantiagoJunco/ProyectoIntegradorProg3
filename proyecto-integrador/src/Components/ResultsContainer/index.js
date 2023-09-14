@@ -8,7 +8,6 @@ class ResultsContainer extends Component {
     }
 
     render() {
-        console.log('Estas son las props del container', this.props);
         return (
             <section className="listado_detalle_generos-Favoritos-home-search" id="section">
                 {

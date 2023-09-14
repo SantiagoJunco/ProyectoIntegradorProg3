@@ -7,22 +7,57 @@ class Popular extends Component {
         super(props)
         this.state = {
             clase: 'Ocultar',
-            ver: 'Ver más'
+            ver: 'Ver más',
+            esFavorito: false
         }
     }
 
     validacion(){
-        if (this.state.clase === 'Ocultar') {
-            this.setState({
-                clase: "Mostrar",
-                ver: "Ver menos"
-            })
-        } else {
-            this.setState({
-                clase: "Ocultar",
-                ver: "Ver más"
-            })
+        this.setState({
+            clase: this.state.clase === 'Ocultar' ? 'Mostrar' : 'Ocultar',
+            ver: this.state.clase === 'Ocultar' ? 'Ver menos' : 'Ver más'
+          })
+    }
+
+    componentDidMount(){
+        let storageFav = localStorage.getItem('Favoritos')
+        let arrParseado = JSON.parse(storageFav)
+        if(arrParseado !== null){
+            let estaMiPersonaje = arrParseado.includes(this.props.id)
+            if (estaMiPersonaje) {
+                this.setState({
+                    esFavorito: true
+                })
+            }
         }
+    }
+
+    agregarFavoritos(idPersonaje){
+        let storageFav = localStorage.getItem('Favoritos')
+        if (storageFav === null){
+            let arrIds = [idPersonaje]
+            let arrStringificado = JSON.stringify(arrIds)
+            localStorage.setItem('Favoritos', arrStringificado)
+        } else {
+            let arrParseado = JSON.parse(storageFav)
+            arrParseado.push(idPersonaje)
+            let arrStringificado = JSON.stringify(arrParseado)
+            localStorage.setItem('Favoritos', arrStringificado )
+        }
+        this.setState({
+            esFavorito: true
+        })
+    }
+
+    SacarFavoritos(idPersonaje){
+        let storageFav = localStorage.getItem('Favoritos')
+        let arrParseado = JSON.parse(storageFav)
+        let favsFiltrados = arrParseado.filter((id)=> id !== idPersonaje)
+        let arrStringificado = JSON.stringify(favsFiltrados)
+        localStorage.setItem('Favoritos', arrStringificado)
+        this.setState({
+            esFavorito: false
+        })
     }
 
     render() {
@@ -35,6 +70,12 @@ class Popular extends Component {
                         <Link to={`/detalle/id/${this.props.id}`} >
                          Ir a detalle
                             </Link>
+                            {
+                        this.state.esFavorito ?
+                         <button onClick={()=> this.SacarFavoritos(this.props.id)}> Sacar de favoritos</button> 
+                        : 
+                        <button onClick={()=> this.agregarFavoritos(this.props.id)}> Agregar a favoritos </button>}
+                    
                 </article>
         )
     }

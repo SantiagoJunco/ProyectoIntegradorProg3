@@ -12,17 +12,10 @@ class Cartel extends Component {
     }
 
     validacion(){
-        if (this.state.clase === 'Ocultar') {
-            this.setState({
-                clase: "Mostrar",
-                ver: "Ver menos"
-            })
-        } else {
-            this.setState({
-                clase: "Ocultar",
-                ver: "Ver más"
-            })
-        }
+        this.setState({
+            clase: this.state.clase === 'Ocultar' ? 'Mostrar' : 'Ocultar',
+            ver: this.state.clase === 'Ocultar' ? 'Ver menos' : 'Ver más',
+          })
     }
     componentDidMount(){
         let storageFav = localStorage.getItem('Favoritos')

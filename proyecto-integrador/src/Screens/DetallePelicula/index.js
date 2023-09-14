@@ -26,12 +26,14 @@ export default class DetallePelicula extends Component {
     }
 
     render() {
-        if (this.state.dataPelicula !== null) {
-            return <PeliculaID Pelicula={this.state.dataPelicula} />
-        } else {
-            return <section className="listado_detalle_generos-Favoritos-home-search" id="section">
-                <h2>Cargando...</h2>
+        return this.state.dataPelicula !== null ? (
+            <PeliculaID Pelicula={this.state.dataPelicula} />
+          ) 
+          : 
+          (
+            <section className="listado_detalle_generos-Favoritos-home-search" id="section">
+              <h2 className='titulos'>Cargando...</h2>
             </section>
-        }
+          )
     }
 }

@@ -7,7 +7,8 @@ class SearchResults extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            busqueda: []
+            busqueda: [],
+            hayResultados: false
         }
     }
 
@@ -35,21 +36,27 @@ class SearchResults extends Component {
 
 
     render() {
-        if (this.state.busqueda.length !== 0) {
-            return (
-                <main>
-                    <h2 className="titulos">Resultados de búsqueda </h2>
-                    <ResultsContainer busqueda={this.state.busqueda} />
-                </main>
-            )
-        } else {
-            return <main>
-                <h2 className="titulos">No hay resultados para tu búsqueda </h2>
-                <section className='listado_detalle_generos-Favoritos-home-search'></section>
-            </main>
-        }
-
+        return (
+            <>
+            {
+            this.state.hayResultados ?
+                (
+                    this.state.busqueda.length !== 0 ? (
+                        <main>
+                            <h2 className="titulos">Resultados de búsqueda</h2>
+                            <ResultsContainer busqueda={this.state.busqueda} />
+                        </main>
+                    ) : (
+                        <main>
+                            <h2 className="titulos">No hay resultados para tu búsqueda</h2>
+                            <section className="listado_detalle_generos-Favoritos-home-search"></section>
+                        </main>
+                    ))
+                :
+                <h1 className='titulos'>Cargando...</h1>
+            }
+            </>
+        )
     }
 }
-
 export default SearchResults
