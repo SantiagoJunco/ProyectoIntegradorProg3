@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Favorito from '../Favorito'
+import './styles.css'
 
 class FavoritosContainer extends Component {
   constructor(props){

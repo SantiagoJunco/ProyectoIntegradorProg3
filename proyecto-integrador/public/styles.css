@@ -19,42 +19,12 @@
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
   
-  .img_tarjeta {
-    width: 150px;
-    height: 250px;
-    border-radius: 20px;
-  }
-  .img_error{
-    width: 220px;
-    height: 300px;
-    border-radius: 20px;
-  }
-  
   .logoFooter {
     width: 150px;
     height: 250px;
     border-radius: 20px;
   }
   
-  .provedor {
-    width: 70px;
-    height: 70px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  
-  .listado_detalle_generos-Favoritos-home-search {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 100px;
-    margin-left: 100px;
-    background-color: rgba(128, 128, 128, 0.425);
-    border-radius: 20px;
-  }
   
   .header {
     background: #c31432; /* fallback for old browsers */
@@ -77,60 +47,10 @@
     background-color: rgba(0, 0, 255, 0.541);
   }
   
-  .logo {
-    height: 160px;
-    order: -1;
-    padding: 12px;
-    border-radius: 20px;
-  }
-  
-  .nav {
-    display: flex;
-    order: 0;
-    background-color: rgba(17, 194, 185, 0.575);
-    border-radius: 20px;
-    padding: 12px;
-  }
-  
-  .formulario {
-    order: 1;
-    padding: 12px;
-  }
-  
-  .oculto {
-    display: none;
-  }
-  
-  .titulos {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .descripcion {
-    text-align: center;
-    color: white;
-  }
-  
   .links {
     text-decoration: none;
     font-weight: bold;
     color: white;
-  }
-  
-  .busqueda {
-    text-align: center;
-  }
-  
-  .boton {
-    border-radius: 5px;
-  }
-  
-  .contenedorboton {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   .barra {
@@ -138,9 +58,6 @@
     text-decoration: none;
   }
   
-  .fotos {
-    width: 150px;
-  }
   
   .img_detalle {
     width: 150px;
@@ -148,57 +65,6 @@
     border-radius: 20px;
   }
   
-  .detalles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    background-color: rgba(128, 128, 128, 0.425);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 200px;
-    margin-left: 200px;
-    border-radius: 20px;
-  }
-  
-  #detalles3 {
-    display: none;
-  }
-  
-  .descripcion_detalle {
-    text-align: center;
-    color: white;
-  }
-  
-  .genero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    background-color: rgba(128, 128, 128, 0.425);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 400px;
-    margin-left: 400px;
-    border-radius: 20px;
-  }
-  
-  .listas_generos {
-    list-style-type: none;
-  }
-  
-  .hijas_listas_generos {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.548);
-    margin: 20px;
-    border-radius: 20px;
-  }
   
   .footer {
     background: #c31432; /* fallback for old browsers */
@@ -219,69 +85,6 @@
     align-items: center;
     background-color: rgba(0, 0, 255, 0.541);
     padding: 20px;
-  }
-  
-  .nombres {
-    color: white;
-    background-color: rgba(128, 128, 128, 0.685);
-    border-radius: 20px;
-    padding: 20px;
-  }
-  
-  .lista_nav {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    padding-left: 0;
-  }
-  
-  .lds-ring {
-    display: inline-block;
-    position: absolute;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #fff;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .loader {
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: 2, 8 ease;
   }
   
   @media (max-width: 390px) {

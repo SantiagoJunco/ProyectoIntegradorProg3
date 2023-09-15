@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PopularesContainer from "../../Components/PopularesContainer"
 import CartelContainer from "../../Components/CartelContainer"
 import { options } from '../../Utils/Constants';
+import './styles.css'
 let PeliculasPopulares = 'https://api.themoviedb.org/3/movie/popular'
 let PeliculasEnCartel = 'https://api.themoviedb.org/3/movie/now_playing'
 

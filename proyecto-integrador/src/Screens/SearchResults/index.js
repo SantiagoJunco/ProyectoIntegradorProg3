@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { options } from '../../Utils/Constants';
 import ResultsContainer from '../../Components/ResultsContainer';
+import './styles.css'
 
 
 class SearchResults extends Component {

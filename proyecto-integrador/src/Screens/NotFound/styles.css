@@ -1,0 +1,25 @@
+.descripcion_detalle {
+    text-align: center;
+    color: white;
+  }
+
+  .img_error{
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+  }
+  .detalles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-color: rgba(128, 128, 128, 0.425);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-radius: 20px;
+  }

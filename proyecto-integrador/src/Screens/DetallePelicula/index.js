@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PeliculaID from "../../Components/PeliculaID"
 import { options } from '../../Utils/Constants'
+import "./styles.css"
 
 export default class DetallePelicula extends Component {
     constructor(props) {

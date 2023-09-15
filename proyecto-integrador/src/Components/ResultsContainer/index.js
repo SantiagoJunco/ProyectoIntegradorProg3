@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Resultado from "../Resultado"
+import './styles.css'
 
 
 class ResultsContainer extends Component {

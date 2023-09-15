@@ -1,5 +1,6 @@
 import { Component } from "react"
 import { Link } from 'react-router-dom';
+import './styles.css'
 
 class Resultado extends Component {
     constructor(props) {

@@ -1,0 +1,22 @@
+.Mostrar{
+    display: block;
+}
+
+.Ocultar{
+    display: none;
+}
+
+.fotos {
+    width: 150px;
+  }
+
+.img_tarjeta {
+    width: 150px;
+    height: 250px;
+    border-radius: 20px;
+  }
+
+.descripcion {
+    text-align: center;
+    color: white;
+  }
