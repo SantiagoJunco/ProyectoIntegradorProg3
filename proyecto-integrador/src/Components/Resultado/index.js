@@ -11,7 +11,7 @@ class Resultado extends Component {
         }
     }
 
-    validacion(){
+    validacion() {
         if (this.state.clase === 'Ocultar') {
             this.setState({
                 clase: "Mostrar",
@@ -27,15 +27,15 @@ class Resultado extends Component {
 
     render() {
         return (
-                <article className="fotos">
-                    <img className="img_tarjeta" src={this.props.imagen} alt='imagen'/>
-                        <p className="descripcion">{this.props.titulo}</p>
-                        <p className={`descripcion ${this.state.clase}`}>{this.props.descripcion}</p>
-                        <button onClick={() => this.validacion()}>{this.state.ver}</button>
-                        <Link to={`/detalle/id/${this.props.id}`} >
-                         Ir a detalle
-                            </Link>
-                </article>
+            <article className="fotos">
+                <img className="img_tarjeta" src={this.props.imagen} alt='imagen' />
+                <p className="descripcion">{this.props.titulo}</p>
+                <p className={`descripcion ${this.state.clase}`}>{this.props.descripcion}</p>
+                <button onClick={() => this.validacion()}>{this.state.ver}</button>
+                <Link to={`/detalle/id/${this.props.id}`} >
+                    Ir a detalle
+                </Link>
+            </article>
         )
     }
 }

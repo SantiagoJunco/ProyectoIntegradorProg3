@@ -36,18 +36,19 @@ class SearchResults extends Component {
 
 
     render() {
-        return ( 
+        return (
             this.state.busqueda.length !== 0 ? (
-            <main>
-              <h2 className="titulos">Resultados de búsqueda</h2>
-              <ResultsContainer busqueda={this.state.busqueda} />
-            </main>
-          ) : (
-            <main>
-              <h2 className="titulos">No hay resultados para tu búsqueda</h2>
-              <section className="listado_detalle_generos-Favoritos-home-search"></section>
-            </main>
-          )
-          )
-}}
+                <main>
+                    <h2 className="titulos">Resultados de búsqueda</h2>
+                    <ResultsContainer busqueda={this.state.busqueda} />
+                </main>
+            ) : (
+                <main>
+                    <h2 className="titulos">No hay resultados para tu búsqueda</h2>
+                    <section className="listado_detalle_generos-Favoritos-home-search"></section>
+                </main>
+            )
+        )
+    }
+}
 export default SearchResults

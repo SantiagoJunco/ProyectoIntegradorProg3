@@ -12,16 +12,16 @@ class Favorito extends Component {
         }
     }
 
-    validacion(){
+    validacion() {
         this.setState({
             clase: this.state.clase === 'Ocultar' ? 'Mostrar' : 'Ocultar',
             ver: this.state.clase === 'Ocultar' ? 'Ver menos' : 'Ver más',
-          })
+        })
     }
-    componentDidMount(){
+    componentDidMount() {
         let storageFav = localStorage.getItem('Favoritos')
         let arrParseado = JSON.parse(storageFav)
-        if(arrParseado !== null){
+        if (arrParseado !== null) {
             let estaMiPersonaje = arrParseado.includes(this.props.id)
             if (estaMiPersonaje) {
                 this.setState({
@@ -31,9 +31,9 @@ class Favorito extends Component {
         }
     }
 
-    agregarFavoritos(idPersonaje){
+    agregarFavoritos(idPersonaje) {
         let storageFav = localStorage.getItem('Favoritos')
-        if (storageFav === null){
+        if (storageFav === null) {
             let arrIds = [idPersonaje]
             let arrStringificado = JSON.stringify(arrIds)
             localStorage.setItem('Favoritos', arrStringificado)
@@ -41,17 +41,17 @@ class Favorito extends Component {
             let arrParseado = JSON.parse(storageFav)
             arrParseado.push(idPersonaje)
             let arrStringificado = JSON.stringify(arrParseado)
-            localStorage.setItem('Favoritos', arrStringificado )
+            localStorage.setItem('Favoritos', arrStringificado)
         }
         this.setState({
             esFavorito: true
         })
     }
 
-    SacarFavoritos(idPersonaje){
+    SacarFavoritos(idPersonaje) {
         let storageFav = localStorage.getItem('Favoritos')
         let arrParseado = JSON.parse(storageFav)
-        let favsFiltrados = arrParseado.filter((id)=> id !== idPersonaje)
+        let favsFiltrados = arrParseado.filter((id) => id !== idPersonaje)
         let arrStringificado = JSON.stringify(favsFiltrados)
         localStorage.setItem('Favoritos', arrStringificado)
         this.props.actualizarState(idPersonaje)
@@ -59,21 +59,21 @@ class Favorito extends Component {
 
     render() {
         return (
-                <article className="fotos">
-                    <img className="img_tarjeta" src={this.props.imagen} alt='imagen'/>
-                        <p className="descripcion">{this.props.titulo}</p>
-                        <p className={`descripcion ${this.state.clase}`}>{this.props.descripcion}</p>
-                        <button onClick={() => this.validacion()}>{this.state.ver}</button>
-                        <Link to={`/detalle/id/${this.props.id}`} >
-                         Ir a detalle
-                            </Link>
-                            {
-                        this.state.esFavorito ?
-                         <button onClick={()=> this.SacarFavoritos(this.props.id)}> Sacar de favoritos</button> 
-                        : 
-                        <button onClick={()=> this.agregarFavoritos(this.props.id)}> Agregar a favoritos </button>}
-                    
-                </article>
+            <article className="fotos">
+                <img className="img_tarjeta" src={this.props.imagen} alt='imagen' />
+                <p className="descripcion">{this.props.titulo}</p>
+                <p className={`descripcion ${this.state.clase}`}>{this.props.descripcion}</p>
+                <button onClick={() => this.validacion()}>{this.state.ver}</button>
+                <Link to={`/detalle/id/${this.props.id}`} >
+                    Ir a detalle
+                </Link>
+                {
+                    this.state.esFavorito ?
+                        <button onClick={() => this.SacarFavoritos(this.props.id)}> Sacar de favoritos</button>
+                        :
+                        <button onClick={() => this.agregarFavoritos(this.props.id)}> Agregar a favoritos </button>}
+
+            </article>
         )
     }
 }

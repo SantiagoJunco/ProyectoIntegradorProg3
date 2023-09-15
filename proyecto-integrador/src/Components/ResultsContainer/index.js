@@ -4,7 +4,7 @@ import './styles.css'
 
 
 class ResultsContainer extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
@@ -12,13 +12,13 @@ class ResultsContainer extends Component {
         return (
             <section className="listado_detalle_generos-Favoritos-home-search" id="section">
                 {
-                        this.props.busqueda.map((peliculaBuscada) => <Resultado
+                    this.props.busqueda.map((peliculaBuscada) => <Resultado
                         key={peliculaBuscada.id}
                         id={peliculaBuscada.id}
                         imagen={'https://image.tmdb.org/t/p/w500' + peliculaBuscada.poster_path}
                         titulo={peliculaBuscada.title}
                         descripcion={peliculaBuscada.overview}
-                    /> )
+                    />)
                 }
             </section>
         )

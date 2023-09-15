@@ -12,5 +12,5 @@ export default function Header() {
         <img className="logoFooter" src="./img/logoMDB.svg" alt="" />
       </section>
     </footer>
-    )
+  )
 }

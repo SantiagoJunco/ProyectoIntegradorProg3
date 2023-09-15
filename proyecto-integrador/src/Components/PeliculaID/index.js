@@ -60,7 +60,7 @@ export default class PeliculaID extends Component {
                 <p className="descripcion_detalle fecha">Fecha de estreno: {this.props.Pelicula.release_date}</p>
                 <p className="descripcion_detalle duracion">Duración(minutos): {this.props.Pelicula.runtime}</p>
                 <p className="descripcion_detalle sinopsis">Sinopsis: {this.props.Pelicula.overview}</p>
-                <ul className="descripcion_detalle genero"> Géneros: {generos.map((genero) => <li> {genero.name}</li>)}</ul>
+                <ul className="descripcion_detalle genero"> Géneros: {generos.map((genero) => <li> {genero.name}</li>)} </ul>
                 {
                     this.state.esFavorito ?
                         <button onClick={() => this.SacarFavoritos(this.props.Pelicula.id)}> Sacar de favoritos</button>

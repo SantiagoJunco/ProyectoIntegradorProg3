@@ -34,16 +34,16 @@ class index extends Component {
     }
 
 
-    traerEnCartel(){
+    traerEnCartel() {
         fetch(PeliculasEnCartel, options)
-        .then(resp => resp.json())
-        .then(data => {
-            console.log(data)
-            this.setState({
-                enCartel: data.results.slice(0, 5)
+            .then(resp => resp.json())
+            .then(data => {
+                console.log(data)
+                this.setState({
+                    enCartel: data.results.slice(0, 5)
+                })
             })
-        })
-        .catch(err => console.log(err))
+            .catch(err => console.log(err))
     }
 
 
@@ -51,7 +51,7 @@ class index extends Component {
         return (
             <main>
                 <h2 className="titulos">PELÍCULAS POPULARES  <a className='titulos' href='/todasPopulares'>(Ver todas)</a></h2>
-                <PopularesContainer populares={this.state.populares}/>
+                <PopularesContainer populares={this.state.populares} />
                 <h2 className="titulos">PELÍCULAS EN CARTELERA <a className='titulos' href='/todasCartel'>(Ver todas)</a></h2>
                 <CartelContainer enCartel={this.state.enCartel} />
             </main>

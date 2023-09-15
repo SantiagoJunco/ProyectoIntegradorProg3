@@ -29,12 +29,12 @@ export default class DetallePelicula extends Component {
     render() {
         return this.state.dataPelicula !== null ? (
             <PeliculaID Pelicula={this.state.dataPelicula} />
-          ) 
-          : 
-          (
-            <section className="listado_detalle_generos-Favoritos-home-search" id="section">
-              <h2 className='titulos'>Cargando...</h2>
-            </section>
-          )
+        )
+            :
+            (
+                <section className="listado_detalle_generos-Favoritos-home-search" id="section">
+                    <h2 className='titulos'>Cargando...</h2>
+                </section>
+            )
     }
 }

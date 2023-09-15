@@ -38,8 +38,8 @@ export default function Header() {
 
             <img className="logo" src="./img/logo.png" alt="Logo" />
 
-            <Formulario/>
-           
+            <Formulario />
+
         </header>
     )
 }
