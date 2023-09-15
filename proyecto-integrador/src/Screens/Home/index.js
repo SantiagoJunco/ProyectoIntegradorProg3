@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PopularesContainer from "../../Components/PopularesContainer"
 import CartelContainer from "../../Components/CartelContainer"
 import { options } from '../../Utils/Constants';
+import { Link } from 'react-router-dom';
 import './styles.css'
 let PeliculasPopulares = 'https://api.themoviedb.org/3/movie/popular'
 let PeliculasEnCartel = 'https://api.themoviedb.org/3/movie/now_playing'
@@ -50,9 +51,16 @@ class index extends Component {
     render() {
         return (
             <main>
-                <h2 className="titulos">PELÍCULAS POPULARES  <a className='titulos' href='/todasPopulares'>(Ver todas)</a></h2>
+                <h2 className="titulos links">PELÍCULAS POPULARES 
+                <Link to={'/todasPopulares'}>
+                    (Ver todas)
+                </Link> 
+                </h2>
                 <PopularesContainer populares={this.state.populares} />
-                <h2 className="titulos">PELÍCULAS EN CARTELERA <a className='titulos' href='/todasCartel'>(Ver todas)</a></h2>
+                <h2 className="titulos">PELÍCULAS EN CARTELERA 
+                <Link to={'/todasCartel'}>
+                    (Ver todas)
+                </Link> </h2>
                 <CartelContainer enCartel={this.state.enCartel} />
             </main>
         )
